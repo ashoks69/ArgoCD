@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: Ashok
+  template:
+    metadata:
+      labels:
+        app: Ashok
+    spec:
+      containers:
+        - name: pavan
+          image: shaikmustafa/dm:latest
+          ports:
+            - containerPort: 80
