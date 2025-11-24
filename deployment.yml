@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: deploy
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: Ashok
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: pavan
-          image: shaikmustafa/cycle:latest
+          image: shaikmustafa/paytm:movie
           ports:
             - containerPort: 80
